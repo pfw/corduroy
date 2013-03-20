@@ -1,13 +1,12 @@
 #!/usr/bin/env python
-from distutils.core import setup
+from setuptools import setup
 import codecs
-from corduroy import __version__ as VERSION
 
 README=codecs.open('README.rst', encoding='utf-8').read()
 LICENSE=codecs.open('LICENSE', encoding='utf-8').read()
 setup(
     name='corduroy',
-    version=VERSION,
+    version='0.9.1',
     author='Christian Swinehart',
     author_email='drafting@samizdat.cc',
     packages=['corduroy', 'corduroy.tests'],
@@ -23,5 +22,6 @@ setup(
         'Programming Language :: Python',
         'Topic :: Database :: Front-Ends',
         'Topic :: Software Development :: Libraries :: Python Modules',
-    ]
+    ],
+    use_2to3=True,
 )
